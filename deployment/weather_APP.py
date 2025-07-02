@@ -64,10 +64,10 @@ with st.sidebar:
 
 n_day = (date_input - last_date).days
 # Load model and generate forecast
-model_wind = load_model(r'../models/wind.pkl')
-model_humidity = load_model(r"../models/hum.pkl")
-model_pressure = load_model(r"../models/pressure.pkl")
-model_tempreture = load_model(r"../models/temp.pkl")
+model_wind = load_model(r'/mount/src/full_weather_prediction_with_advanced_ui/models/wind.pkl')
+model_humidity = load_model(r"/mount/src/full_weather_prediction_with_advanced_ui/models/hum.pkl")
+model_pressure = load_model(r"/mount/src/full_weather_prediction_with_advanced_ui/models/pressure.pkl")
+model_tempreture = load_model(r"/mount/src/full_weather_prediction_with_advanced_ui/models/temp.pkl")
 
 df_wind = generate_forecast(model_wind,n_day , forecast_days)
 df_Humidity = generate_forecast(model_humidity,n_day ,forecast_days)
