@@ -6,14 +6,16 @@ get the data from kaggle , data have 1463 record about the weather starting from
     Data preprocessing
 
 </div>
+
 plot each column to know if the graph is stationary or not with plot function and seasonal decompose to get the trend,seasonality,residual in the graph
 plot the acf(autocorrelation function ) and pacf(partial autocorrelation function)
 test for stationary with augmented dicky fualler test (adfuller function ) and get the number of diffrences to make the graph station
 
 <div style="border-radius: 50px; background: #A55B4B; color: white; padding: 10px; text-align: center; font-size: 25px;">
-    Model
+    Model 
 
 </div>
+
 ****Facebook Prophet Model Details:** (Prophet) Model Details:**
     
     - Univariate time series forecasting model developed by Meta (Facebook)
