@@ -11,7 +11,7 @@ st.set_page_config(
     page_icon=":partly_sunny:",
     layout="wide"
 )
-df = pd.read_csv(r"H:\Faculty_of_AI\level3\Semister2\Pass\project_applied\Weather_Delhi\input\DailyDelhiClimateTrain.csv")
+df = pd.read_csv(r"input\DailyDelhiClimateTrain.csv")
 df['date'] = pd.to_datetime(df['date']) 
 df.set_index(df['date'], inplace=True)
 df.drop(columns=['date'], inplace=True)   
@@ -64,10 +64,10 @@ with st.sidebar:
 
 n_day = (date_input - last_date).days
 # Load model and generate forecast
-model_wind = load_model(r'H:\Faculty_of_AI\level3\Semister2\Pass\project_applied\Weather_Delhi\models\wind.pkl')
-model_humidity = load_model(r"H:\Faculty_of_AI\level3\Semister2\Pass\project_applied\Weather_Delhi\models\hum.pkl")
-model_pressure = load_model(r"H:\Faculty_of_AI\level3\Semister2\Pass\project_applied\Weather_Delhi\models\pressure.pkl")
-model_tempreture = load_model(r"H:\Faculty_of_AI\level3\Semister2\Pass\project_applied\Weather_Delhi\models\temp.pkl")
+model_wind = load_model(r'models\wind.pkl')
+model_humidity = load_model(r"models\hum.pkl")
+model_pressure = load_model(r"models\pressure.pkl")
+model_tempreture = load_model(r"models\temp.pkl")
 
 df_wind = generate_forecast(model_wind,n_day , forecast_days)
 df_Humidity = generate_forecast(model_humidity,n_day ,forecast_days)
