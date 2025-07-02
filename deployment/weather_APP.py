@@ -11,7 +11,7 @@ st.set_page_config(
     page_icon=":partly_sunny:",
     layout="wide"
 )
-df = pd.read_csv(r"../input/DailyDelhiClimateTrain.csv")
+df = pd.read_csv(r"../../input/DailyDelhiClimateTrain.csv")
 df['date'] = pd.to_datetime(df['date']) 
 df.set_index(df['date'], inplace=True)
 df.drop(columns=['date'], inplace=True)   
